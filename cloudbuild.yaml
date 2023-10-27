@@ -1,0 +1,63 @@
+steps:
+  - name: gcr.io/cloud-builders/gcloud
+    id: start
+    script: |
+      echo start
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase1a
+    waitFor:
+      - start
+    script: |
+      echo 1a
+      sleep 5
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase1b
+    waitFor:
+      - start
+    script: |
+      echo 1b
+      sleep 5
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase1c
+    waitFor:
+      - start
+    script: |
+      echo 1c
+      sleep 10
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase2
+    waitFor:
+      - phase1a
+      - phase1b
+      - phase1c
+    script: |
+      echo phase2
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase3a
+    waitFor:
+      - phase2
+    script: |
+      echo 3a
+      sleep 5
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase3b
+    waitFor:
+      - phase2
+    script: |
+      echo 3b
+      sleep 5
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase3c
+    waitFor:
+      - phase2
+    script: |
+      echo 3c
+      sleep 5
+  - name: gcr.io/cloud-builders/gcloud
+    id: phase4
+    waitFor:
+      - phase3a
+      - phase3b
+      - phase3c
+    script: |
+      echo phase4
