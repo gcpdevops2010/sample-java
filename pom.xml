@@ -13,6 +13,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-complete</name>
 	<description>Demo project for Spring Boot</description>
+<properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- Use the version of Java you have installed -->
+</properties>
 
 	<dependencies>
 		<dependency>
