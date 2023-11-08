@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class Application {
+public class Applic ation {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
