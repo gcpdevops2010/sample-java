@@ -9,7 +9,7 @@ public class HelloController {
 	@GetMapping("/")
 	public String index() {
 		CONSTANT="TEST2";
-		return "Greetings from Spring Boot!" + CONSTANT;
+		return "Greetings from Spring Boot!" ;
 	}
 
 }
