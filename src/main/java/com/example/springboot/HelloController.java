@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-
+	String CONSTANT="TEST";
 	@GetMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot!";
+		CONSTANT="TEST2";
+		return "Greetings from Spring Boot!" + CONSTANT;
 	}
 
 }
