@@ -2,7 +2,7 @@ steps:
   - name: gcr.io/cloud-builders/gcloud
     id: start
     script: |
-      echo start
+      echo start 
   - name: gcr.io/cloud-builders/gcloud
     id: phase1a
     waitFor:
